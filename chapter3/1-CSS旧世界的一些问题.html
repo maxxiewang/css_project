@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box1 {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        /* 利用透明边框 */
+        /* border: 1px rgba(0, 0, 0, 0) solid; */
+      }
+      .box2 {
+        /* float: left; */
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+        margin-top: 20px;
+      }
+
+      .box3 {
+        width: 200px;
+        height: 200px;
+        background-color: cornsilk;
+        margin-bottom: 40px;
+      }
+      .box4 {
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>padding不能为负值， 而margin可以为负值</li>
+      <li>背景色分平铺到非margin的区域</li>
+      <li>
+        margin-top 传递的现象及解决方案 1、给父元素加边框 2、BFC 3、flex 和
+        Grid是更好的方案
+      </li>
+      <li>margin 上下叠加的现象及解决方案</li>
+      <li>
+        在div3 与 div4
+        的出现的上下叠加现像，取上下比较大的那一个作为间距。所以尽量给一个元素加margin值
+      </li>
+    </ul>
+    <div class="box1">
+      <div class="box2"></div>
+    </div>
+
+    <div class="box3"></div>
+    <div class="box4"></div>
+  </body>
+</html>

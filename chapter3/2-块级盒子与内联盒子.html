@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>块级盒子与内联盒子</title>
+    <style>
+      .div1 {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        /* 解决文字折行问题 */
+        white-space: normal;
+        word-break: break-all;
+        word-wrap: break-word;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      在CCS中有两种盒子 block-box 块级盒子 和 inline-box 内联盒子
+    </article>
+    <article>
+      块级盒子： div、p、h1... 内联盒子： span、a、strong
+      <br />
+      块级盒子: 独占一行，支持所有样式，不写宽度时，与父容器宽度相同。 <br />
+      内联盒子：盒子不会换行。有些样式不支持：width、height等，margin与padding支持也不好。<br />
+      不写宽度的时候，宽度由内容决定。所占区域不一定是矩形（视口改变后，会有换行问题）
+      <br />
+      内联标签之间，是有空隙的。 fontsize=0 内联盒子问题特别多，布局非常多。
+    </article>
+    <div class="div1">23333333333333333333333333333333333333</div>
+  </body>
+</html>
