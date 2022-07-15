@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .div1 {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+      .div1:hover {
+        background-color: orangered;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div1"></div>
+    <script>
+      let str = '123.45'
+      let str2 = '123'
+      // for (let i in str) {
+      //   if (str[i] == '.') {
+      //     console.log('命中')
+      //   }
+      //   str.indexOf(i)
+      // }
+      let res = str.split('')
+      res.forEach((item, index) => {
+        console.log('--i index--', item, index)
+        if (item == '.' || item == '/') {
+          res[index] = ''
+        }
+      })
+      // console.log('--res--', res)
+      // let res2 = res.join('')
+      // console.log('--res2--', res2)
+
+      // let regxp = /[@#\$%\^&\*]+/g
+      // var patrn = /[`~!@#$%^&*()_+<>?:"{},.\/;'[\]]/im
+      // console.log('--patrn.test(str)--', patrn.test(str))
+    </script>
+  </body>
+</html>
