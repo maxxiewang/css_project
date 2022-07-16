@@ -28,8 +28,11 @@
       内联盒子：盒子不会换行。有些样式不支持：width、height等，margin与padding支持也不好。<br />
       不写宽度的时候，宽度由内容决定。所占区域不一定是矩形（视口改变后，会有换行问题）
       <br />
-      内联标签之间，是有空隙的。 fontsize=0 内联盒子问题特别多，布局非常多。
+      内联标签之间，是有空隙的(fontsize=0)。内联盒子问题特别多，布局非常不适合。
+      devTools中的Computed 会查看display属性（属于什么盒子）：
+      block块级盒子，inline内联盒子
     </article>
+    <span>sss</span>
     <div class="div1">23333333333333333333333333333333333333</div>
   </body>
 </html>

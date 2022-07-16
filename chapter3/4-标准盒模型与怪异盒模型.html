@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>标准盒模型与怪异盒模型</title>
+    <style>
+      .div1 {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+        border: 4px purple solid;
+        /* 怪异盒模型的方法 */
+        box-sizing: border-box;
+      }
+
+      /* 使用怪异盒模型布局 */
+      .box2 {
+        width: 400px;
+        height: 111px;
+        padding: 10px;
+        background-color: orangered;
+        box-sizing: border-box;
+      }
+      /* border-box 应用2，解决加了padding后出现滚动条的问题 */
+      input {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      在标准盒模型中，如果给盒子设置width和height，实际设置的是 content box。
+      padding 和 border再加上设置的宽高一起决定了整个盒子的大小。
+      在怪异盒模型中，所有宽度都是可见宽度，所以内容宽度是该宽度减去边框和填充部分
+      变成怪异盒模型的方法 box-sizeing: border-box <br />
+      box-sizeing属性 <br />
+      content-box: width height -> content 宽高只是来决定content的大小 <br />
+      border-box: width height -> content + padding + border
+      <hr />
+      变成怪异盒模型的应用： <br />
+      应用1： 量取尺寸时不用去计算一些值 <br />
+      应用2： 解决一些需要设置百分比的情况和盒模型值
+
+      <hr />
+      所以，border-box在移动端应用很常见
+    </article>
+    <div class="div1">盒子</div>
+    <div class="box2">个人信息： 地址：</div>
+    <input type="text" />
+  </body>
+</html>

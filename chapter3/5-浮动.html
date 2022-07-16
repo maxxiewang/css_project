@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>浮动</title>
+    <style>
+      body {
+        border: 1px black solid;
+      }
+      .div1 {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        float: left;
+      }
+      .div2 {
+        height: 200px;
+        width: 200px;
+        background-color: orangered;
+        clear: both;
+      }
+      .box1 {
+        /* height: 200px; */
+        width: 200px;
+        /* background-color: pink; */
+        border: 1px black solid;
+      }
+      .box2 {
+        height: 100px;
+        width: 100px;
+        background-color: orangered;
+        float: left;
+      }
+      /* 很流行的做法，是空标签的加强版本 */
+      .box1::after {
+        content: '';
+        clear: both;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="div1"></div>
+    <div class="div2"></div> -->
+    <article>
+      清除浮动的方案: <br />
+      1、clear（清除上下的，其它是清除嵌套的） <br />
+      2、BFC 3、空标签 4、.claerfix:after{}
+    </article>
+    <div class="box1">
+      <div class="box2"></div>
+      <!-- <div style="clear: both"></div> -->
+    </div>
+
+    <script>
+      //! 浮动会产生高度塌陷的问题，因为浮动已经脱离了正常的文档流
+    </script>
+  </body>
+</html>

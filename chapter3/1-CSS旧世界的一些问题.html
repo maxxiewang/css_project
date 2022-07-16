@@ -38,7 +38,7 @@
   <body>
     <ul>
       <li>padding不能为负值， 而margin可以为负值</li>
-      <li>背景色分平铺到非margin的区域</li>
+      <li>背景色分平铺到非margin的区域(border其实是有底色的)</li>
       <li>
         margin-top 传递的现象及解决方案 1、给父元素加边框 2、BFC 3、flex 和
         Grid是更好的方案
@@ -49,6 +49,10 @@
         的出现的上下叠加现像，取上下比较大的那一个作为间距。所以尽量给一个元素加margin值
       </li>
     </ul>
+    <article>
+      padding（填充）是一个简写属性，定义元素边框与元素内容之间的空间，即上下左右的内边距。
+      margin(外边距)属性定义元素周围的空间。
+    </article>
     <div class="box1">
       <div class="box2"></div>
     </div>
