@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>固定定位及特性</title>
+    <style>
+      body {
+        height: 12000px;
+      }
+      .box1 {
+        width: 200px;
+        height: 200px;
+        border: 1px black solid;
+        margin: 100px;
+        /* position: relative; */
+      }
+      .box2 {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        position: fixed;
+        left: 20px;
+        top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <article style="cursor: none">
+      固定定位与绝对定位相似，但是会固定在可视区中 <br />
+      stikcy 主要就是像是
+      回到顶部简头，或是导航栏固定那种。随着滚动条的滚动，粘在那里。 <br />
+    </article>
+    <div class="box1">
+      <div class="box2"></div>
+    </div>
+  </body>
+</html>
