@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .main {
+        background-color: orangered;
+        display: flex;
+        width: 400px;
+        height: 400px;
+        flex-wrap: wrap;
+        /* justify-content: space-around; */
+        /* flex-direction: row-reverse; */
+        align-items: center;
+        /* align-content: center; */
+      }
+      .main div {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。
+      <br />
+      flex-wrap: wrap;与align-content:stretch 搭配使用。
+      (align-content整体的对齐方式)<br />
+      align-items属性定义项目在交叉轴上如何对齐。(每一行的对齐方式)<br />
+    </article>
+    <div class="main">
+      <div class="div1">1</div>
+      <div class="div2">2</div>
+      <div class="div3">3</div>
+      <div class="div4">4</div>
+      <div class="div4">5</div>
+      <div class="div4">6</div>
+      <div class="div4">7</div>
+    </div>
+  </body>
+</html>

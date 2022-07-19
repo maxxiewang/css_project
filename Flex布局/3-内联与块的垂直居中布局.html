@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>内联与块的垂直居中布局</title>
+    <style>
+      .main {
+        background-color: pink;
+        width: 300px;
+        height: 200px;
+        position: relative;
+
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+      }
+      .img {
+        background-color: skyblue;
+        width: 100px;
+        height: 100px;
+        /* margin: 0 auto; */
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        /* margin-left: -50px;
+        margin-top: -50px; */
+        /* margin: -50px; */
+
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      利用 transform: translate(-50%, -50%); 利用变形位移实现垂直居中对齐。 -50%
+      是利用子项的宽度来进行计算
+    </article>
+    <div class="main">
+      <div class="img"></div>
+    </div>
+  </body>
+</html>

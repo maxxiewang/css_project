@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>6-子项分组布局</title>
+    <style>
+      .main {
+        height: 200px;
+        background-color: darkgreen;
+        display: flex;
+        justify-content: space-between;
+      }
+      .divide {
+        width: 50%;
+        height: 200px;
+        border: 1px black solid;
+        background-color: orangered;
+        display: flex;
+        align-items: center;
+      }
+      .box1 {
+        width: 200px;
+        height: 100px;
+        background-color: pink;
+        border: 1px black solid;
+      }
+      .box1:nth-of-type(2) {
+      }
+      .fle {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .fle div {
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="divide">
+        <div class="box1">box1</div>
+      </div>
+      <div class="divide fle">
+        <div class="box1">box2</div>
+        <div class="box1">box3</div>
+      </div>
+    </div>
+  </body>
+</html>
