@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>10-flex-basis及flex缩写</title>
+    <link rel="stylesheet" href="../article.css" class="src" />
+    <style>
+      .main {
+        width: 500px;
+        height: 300px;
+        background-color: orangered;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+      }
+      .main div {
+        width: 200px;
+        height: 100px;
+        background-color: skyblue;
+        /* flex-basis: auto; */
+        flex: 1;
+        line-height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="article">
+      flex-basis 默认值是auto，指定了flex元素在主轴方向上的初始大小。<br />
+      flex-direction的方向，也决定了basis改变高度还是宽度 <br />
+      可选值为： 0% auto 200px 100%
+    </article>
+    <div class="main">
+      <div>car</div>
+      <div>apple</div>
+      <div>football</div>
+    </div>
+  </body>
+</html>

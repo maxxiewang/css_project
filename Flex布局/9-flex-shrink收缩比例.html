@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9-flex-shrink收缩比例</title>
+    <style>
+      .main {
+        width: 500px;
+        height: 300px;
+        background-color: orangered;
+        display: flex;
+        /* align-items: center; */
+      }
+      .main div {
+        width: 600px;
+        height: 200px;
+        background-color: skyblue;
+        flex-shrink: 0;
+        /* flex: 1; */
+      }
+      .main div:nth-of-type(1) {
+        /* flex-shrink: 0.1; */
+      }
+
+      .main2 {
+        width: 500px;
+        height: 300px;
+        background-color: orangered;
+        display: flex;
+      }
+      .main2 div:nth-of-type(1) {
+        width: 300px;
+        height: 100px;
+        background-color: skyblue;
+        /* flex-shrink: 2; */
+      }
+      .main2 div:nth-of-type(2) {
+        width: 400px;
+        height: 100px;
+        background-color: skyblue;
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      flex-shrink
+      默认值是1(自动收缩，跟容器大小相同)，表示flex容器空间不足时，元素的收缩比例
+      <br />
+    </article>
+
+    <!-- 单个元素比较好理解 -->
+    <!-- <div class="main">
+      <div>1</div>
+    </div> -->
+
+    <!-- 多个的时候 
+      1、2 的收缩是不一样的
+      300+400-500  -> 200
+      300 - (3/7 * 200) = 214
+      400 - (4/7 * 200)
+      300*2 + 400 = 1000 变成了十份
+      300 - (6/10 * 200)
+    -->
+    <div class="main2">
+      <div>1</div>
+      <div>2</div>
+      <!-- <div>3</div> -->
+    </div>
+  </body>
+</html>
