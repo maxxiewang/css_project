@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>16-Swiper轮播图</title>
+    <style>
+      .swiper-container {
+        /* 宽，默认与可视区宽一样，高是图片的高度，所以不加高度 */
+        position: relative;
+      }
+      .swiper-wrapper {
+        display: flex;
+      }
+      .swiper-slide {
+        /* 左右撑出容器，做溢出项布局 */
+        flex-shrink: 0;
+        width: 100%;
+      }
+      .swiper-slide img {
+        /* width: 500px;
+        height: 320px; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="../images/Swiper.png" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../images/Swiper.png" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="../images/Swiper.png" alt="" />
+        </div>
+      </div>
+      <!-- 如果需要分页器 -->
+      <div class="swiper-pagination"></div>
+
+      <!-- 如果需要导航按钮 -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </body>
+</html>
